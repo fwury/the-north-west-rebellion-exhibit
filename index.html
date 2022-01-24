@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" context="width=device-width, initial-scale=1">
+    <title>The North-West Rebellion Exhibit</title>
+    <style>
+        /* #03045e #0077b6 #00b4d8 #90e0ef #caf0f8 */
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /* Text */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin-bottom: 1vh;
+            margin-top: 1vh;
+            font-weight: 400;
+        }
+
+        .wide {
+            letter-spacing: 0.1rem;
+        }
+
+        .title {
+            font-size: 5vh;
+        }
+
+        .caption {
+            font-size: 0.8rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Menu */
+        #menu {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 10vh;
+            background-color: #03045e;
+            color: white;
+            text-align: center;
+            vertical-align: center;
+            line-height: 10vh;
+            text-shadow: 0.2vh 0.2vh #0077b6;
+        }
+
+        /* Exhibit and Artifacts */
+        #exhibit {
+            position: fixed;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            left: 0;
+            width: 100vw;
+            height: 45vh;
+            white-space: nowrap;
+            top: 10vh;
+            background-color: white;
+        }
+
+        .artifact {
+            display: inline-block;
+            overflow-y: scroll;
+            white-space: normal;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+            margin-left: 3vw;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            width: 20vw;
+            height: 37vh;
+            transition: all 1s ease;
+            background-color: white;
+            box-shadow: 3vh 3vh gray 1vh;
+        }
+
+        .artifact.big {
+            width: 40vw;
+        }
+
+        .artifact.main {
+            background-color: #03045e;
+            color: white;
+            width: 12.5vw;
+            text-shadow: 0.2vh 0.2vh #0077b6;
+            transition: all 1s ease;
+        }
+
+        .artifact.main:hover {
+            transform: scale(1.05);
+            background-color: #1c1e72;
+        }
+
+        .artifact img {
+            width: 18vw;
+            cursor: pointer;
+            transition: all 1s ease;
+            border: solid 2px black;
+        }
+
+        .artifact img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Main Screen */
+        #main {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            transition: opacity 1s ease;
+            padding-top: 40vh;
+            padding-bottom: 40vh;
+            color: white;
+            text-align: center;
+            transition: all 1s ease;
+        }
+
+        #main_background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            filter: brightness(20%);
+            transition: all 1s ease;
+        }
+
+        /* Artifact Details */
+        #details {
+            position: fixed;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            left: 0vw;
+            width: 100vw;
+            height: 45vh;
+            top: 55vh;
+            padding-top: 3vh;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            background-color: #0077b6;
+            color: white;
+            transition: all 1s ease;
+        }
+
+        #details_img {
+            width: 50vw;
+            transition: all 1s ease;
+        }
+
+        #details_img_container {
+            position: fixed;
+            overflow-y: scroll;
+            height: 50vh;
+            width: 50vw;
+            top: 55vh;
+            left: 0vh;
+            background-color: white;
+            transition: all 1s ease;
+        }
+
+        #details_title,
+        #details_src,
+        #details_description {
+            width: 44vw;
+            transition: opacity 1s ease;
+        }
+
+        #details_src {
+            color: #90e0ef;
+        }
+
+        /* Table */
+        table {
+            table-layout: fixed;
+            width: 100%;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #90e0ef;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <!-- Menu -->
+    <div id="menu">
+        <h1><b>The North-West Rebellion</b> | Exhibit</h1>
+    </div>
+
+    <!-- Exhibit -->
+    <div id="exhibit">
+        <!-- Prologue: Disaffection-->
+        <div class="artifact main">
+            <h1><b>Prologue</b></h1>
+            <h1>Disaffection</h1>
+        </div>
+
+        <div class="artifact">
+            <p>By the 1880s, the Indigenous peoples of the Plains in the West were facing a disaster. These groups
+                included the Cree, Siksika, Kainai, Piikani, and Saulteaux. The buffalo disappeared entirely from the
+                plains in Canada. They had once flourished in the millions in the early 19th century. The Indigenous
+                peoples of the Plains began to starve, as the buffalo was their primary food. This disappearance of the
+                buffalo wasn't natural. The lucrative robe trade encouraged white settlers and Indigenous peoples to
+                overhunt the plains bison. Additionally, westward migration destroyed grazing grounds and introduced new
+                diseases.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/bison_skull_pile.jpg"
+                onclick="setdetails('Bison Skulls (1892)', 'Burton Historical Collection', 'https://digitalcollections.detroitpubliclibrary.org/islandora/object/islandora%3A151477', 'This photograph, taken in 1892, is one of the most iconic photographs of the bison extermination in Canada and the United States in the late 19th century. An unknown photographer took the photo outside of Michigan Carbon Works in Rougeville. The bison population exceeded 60 million in the late 18th century, but the species was hunted down to less than 600 by 1890. This rapid slaughter of buffalo was accelerated when an efficient tanning method was developed, allowing for the hide of the buffalo to be hardened into leather. Buffalo bones could also be processed for fertilizer. The invention of the repeating rifle allowed hunters to hunt large numbers of buffalo. Some hunters killed buffalo for economic gains, like fur traders, while others did it for sport.', 'images/bison_skull_pile.jpg')">
+            <h4><b>Bison Skulls (1892)</b></h4>
+            <p class="caption">A pile of buffalo skulls awaiting indstrial processing</p>
+        </div>
+
+        <div class="artifact">
+            <p>After Canada acquired the Hudson's Bay Company's territory (Rupert's Land), many Indigenous groups signed
+                treaties to prevent starvation. In return for reserve lands, money, and protection, their lands were
+                ceded to Canada. These treaties ended their traditional nomadic way of life, forcing them to turn to
+                agriculture instead. The Indigenous peoples watched as farms, railways, and towns appeared on the
+                prairies in the late 19th century.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/treaty_map.png"
+                onclick="setdetails('Map of Treaties 1 and 2 (1871)', 'Library and Archives Canada', 'https://www.collectionscanada.gc.ca/databases/treaties/001040-119.01-e.php?&sisn_id_nbr=264', 'This map accompanied Treaties No. 1 and 2, the first two treaties of the Numbered Treaties system. It indicates the territory ceded and dates back to 1871. Treaty 1 was signed on August 3, 1871, in Lower Fort Garry by the Anishinabek and Swampy Cree. Treaty 2 was signed on August 21, 1871, at Manitoba Post by the Anishinaabe of southern Manitoba. These treaties aimed to assimilate Indigenous peoples into the Euro-Canadian society, taking away their previous ways of life. The treaties provided small reserves and annual financial support for the Indigenous peoples but ceded large amounts of land in present-day southern Manitoba and Saskatchewan to Canada.', 'images/treaty_map.png')">
+            <h4><b>Map of Treaties 1 and 2 (1871)</b></h4>
+            <p class="caption">A map of the first two numbered treaties</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/treaty6.jpg"
+                onclick="setdetails('Treaty No. 6 (1876)', 'University of Alberta Libraries', 'https://archive.org/details/treatyno600unse/mode/2up', 'This document is a presentation copy of the original Treaty No. 6, printed on parchment paper. Treaty 6 was signed by the Cree, Assiniboine, and Ojibwa in August and September 1876 in Saskatchewan. The territory ceded to Canada, which amounted to more than 300 000 square kilometers, extended across the central regions of present-day Alberta and Saskatchewan, including the current location of Edmonton. Even as early as 1871, the Plains Indigenous peoples were interested in negotiating a treaty that would protect them from settlement. Initially, the Canadian Government was not interested, but after the Cree refused to let any settlers into their unceded territory, negotiation began. A young Cree chief named Poundmaker argued that the settlers had no right to the land, but in the end, most of the plains chiefs signed Treaty 6. The Canadians offered better terms than in the previous treaties, such as protection from famine and better education on the reserves.', 'images/treaty6.jpg')">
+            <h4><b>Treaty No. 6 (1876)</b></h4>
+            <p class="caption">A copy of Treaty No. 6 on parchment</p>
+        </div>
+
+        <div class="artifact">
+            <p>The treaties did not solve the Native peoples' problems. In the winter of 1884, an estimated one-tenth of
+                the plains Indigenous peoples died from starvation, malnutrition, and disease. The now-scarce buffalo
+                had provided their food, clothing, and shelter. Eventually, they became dependent on government rations.
+                The government would sometimes cut rations to twist them into signing treaties. In 1880, the chiefs Big
+                Bear and Crowfoot formed a confederacy to solve these problems.</p>
+        </div>
+
+        <div class="artifact">
+            <p>On June 16, 1884, the Cree chief Mistahimaskwa (Big Bear) hosted a gathering. More than 2000 Cree people
+                attended. After a young warrior named Kawicitwemot assaulted a farmer for denying him food, the
+                North-West Mounted Police (NWMP) arrived. 400 Cree warriors met the police. Mistahimaskwa managed to
+                defuse the situation, allowing the police to apprehend Kawicitwemot peacefully. This incident compelled
+                the Canadian government to send more police to the West, fearing a conflict.</p>
+        </div>
+
+        <div class="artifact">
+            <p>Meanwhile, the Métis had their grievances. After the Red River Rebellion in 1870, many settled in the
+                Fort Carlton region, founding several settlements on the South Saskatchewan River. Their lives as fur
+                traders were impacted by the near-extinction of the buffalo, so they were dependent on these lands for
+                sustenance. In 1883, the government sold one of their villages to the Prince Albert Colonization
+                Company. The Métis believed that the government was not respecting their land, farms, and homesteads.
+                Furthermore, many of them felt that the government was not protecting their rights and identity.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/metis_family.jpg"
+                onclick="setdetails('Métis family with Red River Carts (1883)', 'State Historical Society of North Dakota', 'http://www.digitalhorizonsonline.org/digital/collection/uw-ndshs/id/3298', '', 'images/metis_family.jpg')">
+            <h4><b>Métis family with Red River Carts (1883)</b></h4>
+            <p class="caption">A Métis family poses with their Red River carts in a field in western North Dakota</p>
+        </div>
+
+        <!-- Section 1: Insurgency -->
+        <div class="artifact main">
+            <h1><b>Section 1</b></h1>
+            <h1>Insurgency</h1>
+        </div>
+
+        <div class="artifact">
+            <p>On March 24, 1884, a group of Métis in Batoche decided that Louis Riel should return from exile and
+                represent their cause. On May 6, in a meeting attended by the Métis and sympathetic white
+                representatives from Prince Albert, they decided to send a delegation to ask Riel to return. Riel
+                arrived in Manitoba on July 4. He encouraged the people of the North-West to unite and press their case
+                on the federal government, and in Ottawa, the Conservative government began to fear a second rebellion.
+            </p>
+        </div>
+
+        <div class="artifact">
+            <p>In December 1884, Riel drafted a petition to the government. In return, the government offered little
+                more than an investigation into Métis land claims. Unhappy with the government's response, the Métis set
+                up a provisional government on March 18 and seized the parish church at Batoche, demanding the surrender
+                of the nearby Fort Carlton. Riel became the president, while hunter and tactician Gabriel Dumont became
+                their military commander.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/revolutionary_bill_of_rights.png"
+                onclick="setdetails('Revolutionary Bill of Rights (1885)', 'The Regina Bulletin Evening Edition (April 21, 1885)', '', 'This newspaper contains the 10 points brought up in the Revolutionary Bill of Rights drafted by Riel on March 8. It is from April 21, 1885. The original document is thought to have been burned shortly before the Battle of Duck Lake. In the Bill, Riel demanded that the government grants the Métis rights similar to those given to the Métis of Manitoba in 1870. He also suggested that Alberta and Saskatchewan become provinces with fair representation of the Métis.', 'images/revolutionary_bill_of_rights.png')">
+            <h4><b>Revolutionary Bill of Rights (1885)</b></h4>
+            <p class="caption">The Regina Leader on April 21, 1885, containing Riel's "Revolutionary Bill of Rights"</p>
+        </div>
+
+        <div class="artifact">
+            <p>On March 25, 1885, Dumont brought 30 men to gather supplies from a store near the community of Duck Lake.
+                Meanwhile, the superintendent of the NWMP, Leif Crozier, received word that the Métis were planning to
+                occupy Duck Lake, unaware that this had already happened. He sent fifteen police and seven armed
+                volunteers to get provisions from the store. Dumont and his warriors intercepted the police, and the
+                Canadians returned to Fort Carlton, not wanting to risk a physical engagement. Crozier returned with a
+                force of fifty-six police and forty-three volunteers to take supplies from the store.</p>
+        </div>
+
+        <div class="artifact">
+            <p>In the early morning of March 26, Dumont set up an ambush outside Duck Lake, but some of Crozier's scouts
+                were aware of his plan. Crozier's men prepared a mounted barricade, and the Métis formed a semi-circle
+                to attack the police on both flanks. Dumont sent his brother Isidore and a chief named Assiwiyin with a
+                white flag to distract Crozier's forces, but the police shot both of them. The Métis began to fire from
+                all sides. The police retreated into a clearing, where the Métis ambushed them. Dumont was wounded by a
+                bullet but stayed to motivate his men. Within half an hour, Crozier ordered a retreat. The police fled,
+                and although Dumont's brother Édouard wanted to pursue them, Riel ordered a stop to the bloodshed. The
+                Métis had five casualties while the police had twelve. Colonel Irvine, Crozier's superior, decided to
+                evacuate and destroy Fort Carlton on March 28, and they moved to Prince Albert.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/battle_of_duck_lake.jpg"
+                onclick="setdetails('The Battle of Duck Lake', 'The Canadian Pictorial & Illustrated War News (July 4, 1885)', 'https://www.canadiana.ca/view/oocihm.8_06594_9/5', '', 'images/battle_of_duck_lake.jpg')">
+            <h4><b>Battle of Duck Lake</b></h4>
+            <p class="caption">An illustration of the Battle of Duck Lake</p>
+        </div>
+
+        <div class="artifact">
+            <p>After the Métis victory, sympathetic Cree bands raided stores and farms in Battleford, Saskatchewan, led
+                by the chiefs Big Bear and Poundmaker. On March 28, the residents of Battleford fled to the nearby NWMP
+                post for safety. The Cree stole horses and cattle then killed two farmers. On March 30, the bands took
+                food and supplies from the abandoned stores and houses then returned to Poundmaker's reserve with the
+                loot. They continued to plunder the town until April 24, when General Sir William Dillon Otter's
+                arrived. They had burned most of the town's public buildings and houses.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/battleford_beleagued_cropped.png"
+                onclick="setdetails('Battleford Beleagued', 'The Saskatchean Herald (April 28, 1885)', 'https://commons.wikimedia.org/wiki/File:Saskatchewan_Herald_April-28-1885_1.png', 'This article, from the Saskatchewan Herald on April 28, 1885, described the Looting of Battleford. This particular newspaper was from Battleford, so the article contained first-hand accounts. It describes the Cree as <i>petted redskins marking their course by fire and pillage</i>.', 'images/battleford_beleagued.png')">
+            <h4><b><i>Battleford Beleagued</i></b></h4>
+            <p class="caption">A newspaper article about the Looting of Battleford</p>
+        </div>
+
+        <div class="artifact">
+            <p>During the Cree uprising, young Cree men led by the war chief Wandering Spirit attacked officials,
+                clergy, and settlers in Frog Lake, a small settlement in present-day Alberta. In the early morning of
+                April 2, they took federal Indian agent Thomas Quinn and several other white settlers hostage. The Cree
+                ordered the prisoners to go to their encampment. When Quinn refused, they shot him in the head. Despite
+                Big Bear's attempts to stop the massacre, the band killed another eight unarmed settlers, including two
+                priests. Seventy others from the town were taken captive. One of the men, a clerk named William
+                Bleasdell Cameron, escaped with the help of sympathetic Cree, who sheltered him at their camp. Then,
+                they burned the church. This event became known as the Frog Lake Massacre.</p>
+        </div>
+
+        <div class="artifact">
+            <p>On April 15, 200 Cree warriors attacked Fort Pitt. They intercepted a police party, killing a constable
+                and wounding another. The garrison commander Francis Dickens (son of Charles Dickens) surrendered. Big
+                Bear released the police officers but kept the townspeople hostage. Then, the Cree destroyed the fort.
+            </p>
+        </div>
+
+        <!-- Section 2: Defeat -->
+        <div class="artifact main">
+            <h1><b>Section 2</b></h1>
+            <h1>Defeat</h1>
+        </div>
+
+        <div class="artifact">
+            <p>The government's reaction was decisive. On March 25, 1885, militia mobilization began, even though there
+                were only a few hundred full-time Canadian soldiers. 300 Canadian troops were transported across the
+                unfinished gaps of the Canadian Pacific Railway, and they arrived at Qu'Appelle, Saskatchewan, on April
+                10. Most were Ontarians, but there were also three battalions from Quebec and Nova Scotia. There were an
+                additional 1700 troops from the West, totaling around 5000 under the command of General Frederick
+                Middleton.</p>
+        </div>
+
+        <div class="artifact">
+            <p>Middleton's troops left Qu'Appelle on April 10 and advanced upstream along the South Saskatchewan River.
+                The scouts discovered an apparent ambush by Dumont's Métis and Dakota force at Fish Creek. The Métis
+                decided to attack Middleton's forces at Tourond's Coulée, a nearby ravine. Dumont brought 200 fighters
+                with him to the site. Meanwhile, Middleton set up a camp on a farm 10 kilometers south of Fish Creek.
+                The next day, as Middleton's militia attempted to cross the ravine, a scout noticed the tracks of an
+                inexperienced Métis soldier and followed them. The scout approached Dumont and his men, but before he
+                could catch the scout, the Métis and Canadians had met, and the ambush began. Dumont shot the scout and
+                returned to the rifle pits.</p>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Battle_of_Fish_Creek.jpg/600px-Battle_of_Fish_Creek.jpg">
+        </div>
+
+        <div class="artifact">
+            <img src="images/middleton.jpg"
+                onclick="setdetails('General Sir Frederick Dobson Middleton', 'Archives Canada', 'https://www.bac-lac.gc.ca/eng/CollectionSearch/Pages/record.aspx?app=fonandcol&IdNumber=3420736', 'This photograph of General Sir Frederick Dobson Middleton was taken by photographer William James Topley in September 1885. Middleton (1825-1898) was a British general famous for his service throughout the Empire. He served in the New Zealand Wars in 1845 and the suppression of the Indian Mutiny in 1848. In 1884, he was appointed the commander of the Militia of Canada. When the North-West Rebellion began a year later, he was put in charge. Historians describe him as an experienced soldier who mixed common sense with pomposity. He resigned in 1890 when the House of Commons criticized him for misappropriation. He died eight years later in London, England.', 'images/middleton.jpg')">
+            <h4><b>General Sir Frederick Dobson Middleton</b></h4>
+            <p class="caption">A photograph of General Middleton, the commander of the Militia of Canada</p>
+        </div>
+
+        <div class="artifact">
+            <p>After the ambush, the Métis withdrew into cover and switched to sniping to conserve ammunition. Half of
+                Middleton's force was on the other side of the river, and his artillery fire on the Métis had little
+                effect, although it drove their Cree allies away. Many Métis soldiers wanted to flee, as they were
+                vastly outnumbered, but Dumont convinced them to stay. The Canadians weren't making much progress, and
+                with casualties mounting, they undertook several rushes into the ravine, which only succeeded in causing
+                more deaths. When the sun began to set, Middleton opted for retreat. Although outnumbered, the Métis
+                only suffered eleven casualties.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/fish_creek.png"
+                onclick="setdetails('Incidents at the Battle of Fish Creek', 'The Canadian Pictorial & Illustrated War News (May 23, 1885)', 'www.canadiana.ca/view/oocihm.8_06594_2/5', '', 'images/fish_creek.png')">
+            <h4><b>The Battle of Fish Creek</b></h4>
+            <p class="caption">Several sketches of incidents at the Battle of Fish Creek</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/fish_creek_artillery.png"
+                onclick="setdetails('Artillery Shelling at the Battle of Fish Creek', 'The Canadian Pictorial & Illustrated War News (May 30, 1885)', 'https://www.canadiana.ca/view/oocihm.8_06594_3/6', 'This sketch is of the firing of artillery at the Métis during the Battle of Fish Creek. It was accompanied by the quote <i>In the meanwhile the guns were being moved from place to place so as to obtain the most advantageous position for shelling the rebels in the ravine</i>.', 'images/fish_creek_artillery.png')">
+            <h4><b>Artillery Shelling at the Battle of Fish Creek</b></h4>
+            <p class="caption">A sketch of the artillery shelling at Fish Creek</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/fish_creek_report_cropped.png"
+                onclick="setdetails('Fish Creek Report', 'Copy of Official Reports', 'www.canadiana.ca/view/oocihm.92873/3', 'This is the first page of an official report written by General Middleton on May 1, 1885, concerning the Battle of Fish Creek. It recounts the camp set up on the farm, the scouting, and the initial ambush.', 'images/fish_creek_report.png')">
+            <h4><b>Fish Creek Report</b></h4>
+            <p class="caption">An official report from General Middleton concerning the Battle of Fish Creek</p>
+        </div>
+
+        <div class="artifact">
+            <p>On April 13, a column led by William Dillon Otter split from Middleton's force to save Battleford from
+                the Cree. They arrived on April 24 and found hundreds of civilians crammed into the fort, but not any of
+                Poundmaker's men. Pressured by the civilians and his troops, Otter decided to take action. He received
+                permission to "punish Poundmaker" and set out with cavalry, militia, volunteers, and two field rifles
+                towards Cut Knife Hill, where 1500 Cree and Assiniboine men, women, and children were.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/cut_knife_map.png"
+                onclick="setdetails('Military Map of the Cut Knife Battlefield', 'University of Alberta Library', 'http://peel.library.ualberta.ca/bibliography/1519/48.html', 'This map of the Battle of Cut Knife was drawn by R. L. Wadmore and presented to Parliament in 1886, a year after the battle. It contains details about the lines of advance and the location of the troops. It was titled <i>Report upon the supression of the rebellion in the North-West Territories and matters in connection therwith, in 1885</i>.', 'images/cut_knife_map.png')">
+            <h4><b>Military Map of the Cut Knife Battlefield</b></h4>
+            <p class="caption">A map of the battlefield of the Battle of Cut Knife drawn in 1886</p>
+        </div>
+
+        <div class="artifact">
+            <p>On May 2, just after sunrise, Otter's column arrived. To reach the camp, the men crossed the creek and
+                waded through the marsh. An old Cree man awoke when he heard the sound of soldiers and alerted the
+                others. Otter's cannons destroyed the camp's lodges, and the women and children ran towards the ravines
+                for safety. Assiniboine warriors charged at Otter's men to defend the women and children. The Canadians
+                formed a wedge, with two lines of soldiers and police facing the ravines while the volunteers and
+                militia guarded the rear, facing the marsh. The Cree employed a flanking maneuver, stealthily moving
+                towards the soldiers. They almost encircled Otter's men. Finally, the Canadians chose to withdraw
+                through the marsh. As they retreated, some of the Cree fighters mounted their horses. Poundmaker
+                convinced his men to let them leave.</p>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Battle_of_Cut_Knife.jpg/550px-Battle_of_Cut_Knife.jpg">
+        </div>
+
+        <div class="artifact">
+            <img src="images/battle_of_cut_knife_creek.png"
+                onclick="setdetails('The Battle of Cut Knife', 'The Canadian Pictorial & Illustrated War News (May 16, 1885)', 'www.canadiana.ca/view/oocihm.8_06594_1/9', 'This sketch is of the Battle of Cut Knife. It was accompanied by the quote <i>The Indians charged down upon the Mounted Police, but, although [they] got within thirty years of them, they were driven back</i>.', 'images/battle_of_cut_knife_creek.png')">
+            <h4><b>The Battle of Cut Knife</b></h4>
+            <p class="caption">A sketch of the Battle of Cut Knife</p>
+        </div>
+
+        <div class="artifact">
+            <p>On May 7, Middleton reached Gabriel's Crossing and advanced to within 13 kilometers of Batoche. Middleton
+                planned to encircle the Métis by unloading troops at the rear of the town by a steamboat named
+                Northcote. However, the steamboat arrived before the planned attack, and the Métis sliced off its masts
+                and smokestacks by lowering the ferry cable. On May 9, Middleton approached the church at Mission Ridge,
+                unaware that the steamboat was damaged. After finding only priests, nuns, women, and children, they
+                advanced to shell the town.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/northcote.jpg"
+                onclick="setdetails('The Steamboat <i>Northcote</i>', 'Prince Albert Historical Society', 'http://scaa.sk.ca/ourlegacy/permalink/29935', 'This photograph is of the damaged steamboat <i>Northcote</i> after the Battle of Batoche. The small arms fire of the Métis did not damage the ship, but when they lowered the ferry cable, the <i>Northcote</i> floated straight into it. Its masts and smokestacks were sliced off, delaying the advance of the government troops.', 'images/northcote.jpg')">
+            <h4><b>The Steamboat <i>Northcote</i></b></h4>
+            <p class="caption">The damaged steamboat Northcote after the battle</p>
+        </div>
+
+        <div class="artifact">
+            <p>The militia advanced about half a kilometer before heavy fire on both sides forced them to take cover.
+                The Métis snipers hid in inconspicuous rifle pits, and the Canadians could not spot them. The Métis then
+                attacked the Canadian artillery, but they fired at the attackers. The Métis then attempted to outflank
+                the militia, resulting in heavy fighting. In the afternoon, the artillery bombarded the rifle pits to no
+                avail. Towards the end of the first day, Middleton ordered the Canadians to retire into temporary
+                fortifications behind a network of improvised barricades for the night.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/batoche_sleep.jpg"
+                onclick="setdetails('Canadian Soldiers Preparing to Sleep', 'Prince Albert Historical Society', 'http://scaa.sk.ca/ourlegacy/permalink/29946', 'This is a photograph of the Canadian troops preparing to sleep after the engagements on May 9. After a somewhat unsuccessful day, Middleton ordered the Canadian troops to retire into an improvised fort about a mile away. The troops slept behind a series of improvised barricades.', 'images/batoche_sleep.jpg')">
+            <h4><b>Canadian Soldiers Preparing to Sleep</b></h4>
+            <p class="caption">Middleton's men preparing to sleep in the makeshift fort on May 9</p>
+        </div>
+
+        <div class="artifact">
+            <p>On May 10 and 11, Middleton made heavily defended gun-pits and shelled the town. The Métis' heavy fire
+                prevented attempted Canadian advancements. To test the enemy's strength, Middleton dispatched a group of
+                men north. At the same time, he conducted an assault at the front. The Métis redirected some of their
+                forces to hold off the northward flank and did not have the necessary power to oppose the central
+                assault. The Canadians were able to make it as far as the Batoche cemetery before turning back.
+                Middleton, satisfied with the result, planned to assault the town the next morning using this method.
+            </p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/batoche_map.jpg"
+                onclick="setdetails('Military Map of Batoche', 'Library and Archives Canada', 'http://www.collectionscanada.gc.ca/obj/025002/f1/xx004369-v6.jpg', 'This map is a sketch of the battlefield of Batoche, dating back to 1886.', 'images/batoche_map.jpg')">
+            <h4><b>Military Map of Batoche</b></h4>
+            <p class="caption">A sketch of the battlefield of the Battle of Batoche</p>
+        </div>
+
+        <div class="artifact">
+            <p>By May 12, the Métis were running out of ammunition. They resorted to using rocks as ammunition or
+                hunting for bullets fired by the Canadians. Three-quarters were wounded. Meanwhile, Middleton enacted
+                his plan, leading his group north to distract the Métis while Colonel van Straubenzee led the main
+                assault. However, van Straubenzee failed to hear the gunfire from the north and did not attack.</p>
+        </div>
+
+        <div class="artifact">
+            <p>After the failed assault, the senior Canadian officers, angry with Middleton's caution, decided to rush
+                straight at the Métis' rifle pits. Many Métis soldiers were too far to help because of Middleton's
+                diversion, and those who remained did not have enough ammunition, but they resisted bravely. The
+                charging Canadian militia stormed into Batoche as the diverted Indigenous fighters returned. They fired
+                at the Canadians from rifle pits near the village. However, the Canadian charge was too overwhelming,
+                and the last defenders of Batoche surrendered. Straubenzee's soldiers drove out the remaining Métis from
+                the town.
+            </p>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Battle_of_Batoche_Print_by_Seargent_Grundy.jpg/550px-Battle_of_Batoche_Print_by_Seargent_Grundy.jpg">
+        </div>
+
+        <div class="artifact">
+            <img src="images/another_battle.png"
+                onclick="setdetails('<i>Another Battle</i>', 'The Huron Expositor (May 15, 1885)', 'https://news.google.com/newspapers?id=enADAAAAIBAJ&sjid=IykDAAAAIBAJ&pg=5560,960946', '', 'images/another_battle.png')">
+            <h4><b><i>Another Battle</i></b></h4>
+            <p class="caption">A newspaper containing the news of the Battle of Batoche</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/batoche_skirmish_cropped.png"
+                onclick="setdetails('In the Skirmish Line at Batoche', 'The Canadian Pictorial & Illustrated War News (May 30, 1885)', 'https://www.canadiana.ca/view/oocihm.8_06594_3/1', '', 'images/batoche_skirmish.png')">
+            <h4><b><i>In the Skirmish Line at Batoche</i></b></h4>
+            <p class="caption">A sketch of the skirmish line at the Battle of Batoche</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/batoche_charge.png"
+                onclick="setdetails('The Bayonet Charge at Batoche', 'The Canadian Pictorial & Illustrated War News (May 30, 1885)', 'https://www.canadiana.ca/view/oocihm.8_06594_3/5', 'This sketch depicts the charge on May 12, in which the Canadian forces stormed the village of Batoche, firing at will and cheering. This charge ended the resistace at Batoche, a major turning point in the Rebellion.', 'images/batoche_charge.png')">
+            <h4><b><i>The Bayonet Charge at Batoche</i></b></h4>
+            <p class="caption">A sketch of the bayonet charge at the Battle of Batoche</p>
+        </div>
+
+        <!-- Section 3: Prosecution -->
+        <div class="artifact main">
+            <h1><b>Section 3</b></h1>
+            <h1>Prosecution</h1>
+        </div>
+
+        <div class="artifact">
+            <p>Although the Battle of Batoche had virtually ended the Rebellion, some small battles occurred after. The
+                first was the Battle of Frenchman's Butte. On May 14, a group of men led by General Strange left
+                Edmonton and caught up to the Frog Lake Cree at Frenchman's Butte. The Cree dug in at the top of a steep
+                hill. Directly advancing towards the Cree would have been difficult, so instead, they opted to fire from
+                long range for several hours. Eventually, both sides retreated. The second was the Battle of Loon Lake.
+                On June 3, a group of police and fighters led by Major Sam Steele attacked a group of Plains Cree
+                warriors and saved a group of hostages. The Cree suffered 5-12 casualties, and the Canadians captured
+                Wandering Spirit.</p>
+        </div>
+
+        <div class="artifact">
+            <p>On May 15, a group of scouts spotted Riel and approached him. After a brief conversation, Riel declared
+                that he was giving himself up. After a brief stay in Middleton's camp near Batoche, he was sent to a
+                prison in Regina to await trial. He was charged with six counts of high treason, which carried a
+                mandatory death sentence.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/riel_prisoner.jpg"
+                onclick="setdetails('Riel as a Prisoner at Batoche', 'Library of Archives Canada', 'https://www.bac-lac.gc.ca/eng/collectionsearch/Pages/record.aspx?app=fonandcol&IdNumber=3192258', 'This is a photograph of Louis Riel as a prisoner in the camp of General Middleton in Batoche, taken on May 16, 1885 by the photographer James Peter.', 'images/riel_prisoner.jpg')">
+            <h4><b><i>Riel as a Prisoner at Batoche</i></b></h4>
+            <p class="caption">A photograph of Louis Riel in the camp of Middleton at Batoche</p>
+        </div>
+
+        <div class="artifact">
+            <p>The prosecutors at Riel's trial included George Burbidge, the Deputy Attorney General, Christopher
+                Robinson, QC, and Britton Bath Osler, QC. There were also two younger lawyers who later became the Chief
+                Justice of Alberta and the Attorney General of Quebec. Riel could not afford defence lawyers, so
+                supporters in Quebec provided funds. Charles Fitzpatrick, who later became the Chief Justice of Canada,
+                led the defence. The jury was composed of six people rather than the usual twelve. All of them were
+                English-speaking Protestants. The witnesses included General Middleton and Riel's cousin.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/riel_courthouse.jpg"
+                onclick="setdetails('Regina Courthouse', 'Library of Archives Canada', 'https://www.bac-lac.gc.ca/eng/collectionsearch/Pages/record.aspx?app=fonandcol&IdNumber=3194526', 'This is a photograph of the Regina courthouse, which Louis Riel was tried at. It was taken in 1885 by the photographer Oliver Buell.', 'images/riel_courthouse.jpg')">
+            <h4><b>Regina Courthouse</b></h4>
+            <p class="caption">A photograph of the Regina Courthouse, where Riel was tried</p>
+        </div>
+
+        <div class="artifact">
+            <p>Riel's lawyers argued that he was mentally unstable, hoping that Riel would be acquitted by reason of
+                insanity. He had been sent to mental asylums in Quebec twice, and it was said that a few of his writings
+                showed signs of megalomania. Riel objected to using this defence, declaring that he did not suffer from
+                mental health issues. Instead, he argued that his actions were justified. The prosecution argued that
+                Riel commited high treason as the sole leader of the Rebellion. They also called in medical witnesses to
+                refute the argument of insanity.</p>
+        </div>
+
+        <div class="artifact">
+            <p>On the last day of Riel's trial, the two sides made their closing arguments. The defence lawyers outlined
+                the historical role of the Métis, then argued that Riel's actions could not be a sane man's. Riel then
+                delivered a lengthy speech defending his actions and the rights of the Métis. He dismantled his lawyers'
+                argument for insanity, claiming that he was perfectly sane. Finally, Riel denounced the Government of
+                Canada for its disregard for the people in the West. He hoped to be recognized as a force of good
+                eventually. After the prosecution's summary speech, the jury found him guilty but recommended mercy.
+                However, the judge sentenced him the death, the only possible punishment under the Treason Act. The
+                defence attempted to appeal the verdict twice to higher courts but failed, and a medical examination of
+                Riel's alleged insanity had an ambiguous result. The government was flooded with petitions to save Riel,
+                but he was hung on November 16.</p>
+        </div>
+
+        <div class="artifact">
+            <img src="images/last_wishes_cropped.jpg"
+                onclick="setdetails('Last Wishes of Louis Riel', 'McCord Museum', 'http://collections.musee-mccord.qc.ca/scripts/viewobject.php?Lang=1&section=false&accessnumber=M20193&imageID=250973&pageMulti=1', 'This document was written by Riel, the night before his execution (November 16, 1885), regarding the burial of his remains and the publication of his writings. It was reportedly sent to Colonel Irvine, the commandant of the North-West Mounted Police.', 'images/last_wishes_cropped.jpg')">
+            <h4><b>Last Wishes of Louis Riel</b></h4>
+            <p class="caption">The last wishes of Louis Riel regarding his burial and publication of his writings</p>
+        </div>
+
+        <!-- Epilogue: Aftermath -->
+        <div class="artifact main">
+            <h1><b>Epilogue</b></h1>
+            <h1>Aftermath</h1>
+        </div>
+
+        <div class="big artifact">
+            <!-- Todo: Add more perspectives on Riel's execution -->
+            <p>The matter of Riel's execution deeply divided Canadians, and would affect Canadian politics for years.
+            </p>
+            <table>
+                <tr>
+                    <th><b>Francophones</b></th>
+                    <th><b>Anglophones</b></th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Although the French Canadians had supported the colonization of the West, they were outraged
+                            over Riel's execution. They interpreted the hanging of Riel as a wounding of the entire
+                            French people, an act of cruelty against a supporter of rights for French Catholics. To
+                            them, the hanging represented a Canada where French Canadians' views and feelings could be
+                            disregarded. The hanging of Riel was first in a series of events that led to the rise of
+                            Quebec separatism. Riel's execution tarnished the reputation of the Conservative Party in
+                            Quebec. It became known as "le parti des Anglais" (the party of the English). Some
+                            politicians rose to power by publicly expressing these opinions.</p>
+                    </td>
+                    <td>
+                        <p>Conservative Ontario strongly supported Riel's execution. Some claimed that the Catholic
+                            Church encouraged the uprisings, and that if the "hot-headed semi-savages [sic] are to be
+                            made to understand that the central Government is too strong to be trifled with (and unless
+                            these lessons are learnt there can be no security for peace), then Riel must meet the
+                            punishment he has deserved twice over [...] there is no doubt whatever that he has committed
+                            at least once in his life the very crime of murder which is to be treated as unpardonable in
+                            the case of some of his late followers."</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="artifact">
+            <p>On November 27, two weeks after Riel's execution, six Cree and two
+                Assiniboine warriors, including Wandering Spirit, were hanged at Battleford for murder. Poundmaker and
+                Big Bear received a 3-year prison sentence. Dumont escaped to the United States but later returned after
+                an amnesty. Riel's secretary, W. H. Jackson, was found not guilty by reason of insanity. The provisional
+                government council received sentences ranging from conditional discharges to 7 years in prison.</p>
+        </div>
+
+        <div class="artifact">
+            <p>The Rebellion resulted in the collapse of the provisional government, the subjugation of the Plains
+                Indigenous peoples, the completion of the Canadian Pacific Railway, and the execution of Riel. It took
+                many decades for the Indigenous peoples and Métis of Western Canada to recover politically. The
+                government provided land grants to the Saskatchewan Métis and resurveyed the Métis river at their wish,
+                but they still did not have full equality. Riel's trial caused upset among French Canadians,
+                contributing to the distrust of Anglophones in Quebec that still exists today.</p>
+        </div>
+
+        <div class="artifact">
+            <p>The Rebellion is sometimes considered a Resistance by historians. A resistance tends to be more passive
+                than a rebellion, while a rebellion is about overthrowing. This is because the Indigenous peoples
+                governed the land long before the Canadian government did, and the uprisings were merely reactions
+                against Canada's control.</p>
+        </div>
+
+        <div class="artifact">
+            <p>Many of the battlefields of the Rebellion are now National Historic Sites of Canada, such as Steele
+                Narrows (Loon Lake), Frenchman Butte, Fish Creek, Fort Pitt, and Frog Lake.</p>
+            <p>The Rebellion has been featured in various fictional works, such as:</p>
+            <ul>
+                <li>Stewart Sterling's <i>Red Trails</i> (1935)</li>
+                <li>Cecil B. DeMille's <i>North West Mounted Police</i> (1940)</li>
+                <li>Giles Lutz's <i>The Magnificent Failure</i> (1967)</li>
+                <li>Albert Silver's <i>Lord of the Plains</i> (1990)</li>
+                <li>B. J. Bayle's <i>Battle Cry at Batoche</i> (1998)</li>
+                <li>Maia Caron's <i>Song of Batoche</i> (2017)</li>
+            </ul>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="artifact main">
+            <h1><b>Conclusion</b></h1>
+            <h1>Past-to-Present Links</h1>
+        </div>
+
+        <div class="artifact">
+            <h1>Poundmaker's Exoneration</h1>
+            <p>On May 23, 2019, Justin Trudeau exonerated Chief Poundmaker, stating that
+                <blockquote>It was here that Chief Poundmaker made his indelible mark on history. Here that he earned
+                    his well-deserved reputation as a diplomat and peacemaker. Here that he stood up for his people and
+                    demonstrated compassion in the face of persecution. <i>[...]</i> Fuelled by mistrust and a lack of
+                    understanding, government officials held Chief Poundmaker, as the recognized leader of his people,
+                    responsible for the actions of his community and convicted him of treason-felony in August
+                    1885. <i>[...]</i> Today, our government acknowledges that Chief Poundmaker was a peacemaker who
+                    never stopped fighting for peace. <i>[...]</i> The Government of Canada recognizes that Chief
+                    Poundmaker was not a criminal, but someone who worked tirelessly to ensure the survival of his
+                    people, and hold the Crown accountable to its obligations as laid out in Treaty 6. We recognize that
+                    the unjust conviction and imprisonment of Chief Poundmaker had, and continues to have, a profound
+                    impact on the Poundmaker Cree Nation. <i>[...]</i> And so, as an important symbol of our desire to
+                    revitalize our relationship with the Poundmaker Cree Nation, I'm here today on behalf of the
+                    Government of Canada to confirm without reservation that Chief Poundmaker is fully exonerated of any
+                    crime or wrongdoing.
+                </blockquote>
+            </p>
+            <img
+                src="https://s3.amazonaws.com/socast-superdesk/media/20201108001120/f4fbbbc9f93a2044ceabc5740ca5d03a14c3d810e73ac956784cb13bae99e5ac.jpg">
+            <p>Meanwhile, the subject of Louis Riel's exoneration is one of debate. Those who argue against it claim
+                that it will do nothing good, and that an exoneration would merely an act of political expediency.</p>
+        </div>
+
+        <div class="artifact">
+            <h1>Métis Rights</h1>
+            <p>The fight for Métis rights still continues today. Métis are still not considered status Indians, and
+                cannot claim all of the benefits that status Indians can. These benefits may include on-reserve housing,
+                on-reserve education, and exemptions from taxes in specific situations. Recent legal cases are making
+                advancements in Métis rights. For example, on April 14, 2016, in the case Daniels v. Canada (2016), the
+                Supreme Court ruled that the Crown owes the same fiduciary duty to Métis as it does to Treaty Indians.
+                Additionally, some Métis groups are fighting for the right to self-government. </p>
+        </div>
+
+        <div class="artifact">
+            <h1>Sources (Citations)</h1>
+            <p>Click <a
+                    href="https://docs.google.com/document/d/1PRZJMzTIlXdZqrB9pS0vZJs3lfAUvD5CGfS_vnb0ZhQ/edit?usp=sharing"
+                    target="_blank">here</a> to view the citations.</p>
+        </div>
+    </div>
+
+    <!-- Artifact Details -->
+    <div id="details_img_container">
+        <img id="details_img"></img>
+    </div>
+
+    <div id="details" data-firsttime="true">
+        <h2 id="details_title"><i>Click on an image for details</i></h2>
+        <p><b id="details_src_label"></b><a id="details_src" target="_blank"></a></p>
+        <p id="details_description"></p>
+    </div>
+
+    <!-- Main Screen -->
+    <video id="main_background" autoplay muted loop>
+        <source src="images/background.mp4" type="video/mp4">
+    </video>
+
+    <div id="main">
+        <h1 class="wide title">The North-West Rebellion Exhibit</h1>
+        <p class="wide"><i>Press enter to begin</i></p>
+    </div>
+
+    <script>
+        /* Artifact Details */
+        var details_status = 0;
+
+        function setdetails(title, source, link, desc, image) {
+            if (details_status == 0) {
+                document.getElementById('details_img').src = image;
+            } else {
+                document.getElementById('details').style.opacity = 0;
+                document.getElementById('details_img').style.opacity = 0;
+            }
+
+            details_status = 1;
+            document.getElementById('details').style.width = "50vw";
+            document.getElementById('details').style.left = "50vw";
+
+            setTimeout(function () {
+                document.getElementById('details_title').innerHTML = title;
+                document.getElementById('details_src_label').innerHTML = "Source: ";
+                document.getElementById('details_src').innerHTML = source;
+                document.getElementById('details_src').href = link;
+                document.getElementById('details_description').innerHTML = desc;
+                document.getElementById('details').style.opacity = 1;
+                document.getElementById('details_img').src = image;
+                document.getElementById('details_img').style.opacity = 1;
+            }, 1000);
+        }
+
+        /* Screen Switching */
+        var screen = 0;
+        document.onkeydown = function (e) {
+            switch (e.keyCode) {
+                case 13:
+                    switch (screen) {
+                        case 0:
+                            screen = 1;
+                            document.getElementById('main').style.opacity = 0;
+                            document.getElementById('main_background').style.opacity = 0;
+                            setTimeout(function () {
+                                document.getElementById('main').style.display = 'none';
+                                document.getElementById('main_background').style.display = 'none';
+                            }, 1000);
+                            break;
+                    }
+            }
+        }
+    </script>
+</body>
+
+</html>
