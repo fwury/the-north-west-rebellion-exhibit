@@ -831,7 +831,7 @@
     </div>
 
     <!-- Main Screen -->
-    <video id="main_background" autoplay loop>
+    <video id="main_background" autoplay loop muted>
         <source src="images/background.mp4" type="video/mp4">
     </video>
 
@@ -843,8 +843,6 @@
     <script>
         /* Artifact Details */
         var details_status = 0;
-        
-        document.getElementById('main_background').play();
 
         function setdetails(title, source, link, desc, image) {
             if (details_status == 0) {
